@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+		<div class="header">
+			<h3>My Collection.</h3>
+		</div>
+
+		<table class="table">
+			<thead>
+				<tr>	
+					<th scope="col">Name</th>	
+					<th scope="col">#</th>			
+					<th scope="col">Series</th>
+					<th scope="col">Store / Place of Purchase</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				{% for pop in pops %}
+				<tr>
+					<td>{{ pop.funkoname }}</td>
+					<td>{{ pop.funkonum }}</td>
+					<td>{{ pop.funkoseries }}
+					<td>{{ pop.store }}</td>
+				</tr>
+				{% endfor %}
+			</tbody>		
+		</table>
+		
+		<div class="footer">
+			<a class="nav-link" href="/addafunko">
+				<button type="button" class="btn btn-primary btn-lg btn-block">Add to Collection</button>
+			</a>
+		</div>
+	</div>
+{% endblock %}

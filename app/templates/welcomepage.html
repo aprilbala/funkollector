@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <center>
+          <img src="{{url_for('static', filename='funko.png')}}" style="width: 70%">
+          <br />
+          <br />Welcome to <span style="font-variant: small-caps; font-weight: 900">Funkollector</span>, 
+          a web app to keep track of your collection and wishlist for 
+          <a href="https://www.funko.com/" target="_blank">Funko</a>'s Pop! Vinyl related products!
+          <br />
+          <br />
+        </center>
+      </div>
+{% endblock %}

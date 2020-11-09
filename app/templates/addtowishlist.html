@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="container">
+		<div class="header">
+			<h3>Add a Funko to your wishlist.</h3>
+			<hr />
+		</div>
+
+		<div class="box" style="width:500px">
+ 			<form action="/addtowishlist" method="POST">
+ 				<div class="form-row">
+					<div class="form-group col-md-6">
+						{{ form.funkoname.label }}
+						<br>
+ 						{{ form.funkoname }}
+					</div>
+
+					<div class="form-group col-md-2">
+						{{ form.funkonum.label }}
+ 						{{ form.funkonum }}
+					</div>
+					<br>
+				</div>	
+
+				<div class="form-group">
+					{{ form.funkoseries.label }}
+					<br>
+ 					{{ form.funkoseries }}
+				</div>
+
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						{{ form.store.label }}
+						<br>
+ 						{{ form.store }}
+					</div>
+					<div class="form-group col-md-6">
+						{{ form.price.label }}
+						<br>
+ 						{{ form.price }}
+					</div>
+				</div>
+
+				<div class="form-row">
+					{{ form.submit() }}
+				</div>
+			</form>
+		</div>
+
+	</div>
+{% endblock %}
