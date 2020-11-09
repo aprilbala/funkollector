@@ -1,0 +1,1 @@
+This repository contains all the files for my Funkollector project that I completed for my ICS 321 (Database Systems I) class at the University of Hawaii at Manoa (Spring 2018).
